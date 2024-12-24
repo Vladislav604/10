@@ -1,0 +1,35 @@
+class StringVar:
+    def __init__(self, value=""):
+        """
+        Инициализация объекта с начальным значением строки.
+        """
+        self.__value = value
+
+    def set(self, value):
+        """
+        Устанавливает новое значение строки.
+        :param value: Новое значение строки
+        """
+        self.__value = value
+
+    def get(self):
+        """
+        Возвращает текущее значение строки.
+        :return: Значение строки
+        """
+        return self.__value
+
+
+# Тестирование класса StringVar
+if __name__ == "__main__":
+    # Создание объекта
+    string_var = StringVar("Hello")
+
+    # Проверка метода get
+    print("Initial value:", string_var.get())  # Ожидаемый вывод: Hello
+
+    # Изменение значения с помощью метода set
+    string_var.set("World")
+
+    # Проверка нового значения
+    print("Updated value:", string_var.get())  # Ожидаемый вывод: World
